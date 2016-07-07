@@ -8,7 +8,7 @@
 ; Returning of Rebol values from called to calling script via QUIT/return.
 [
     do-script-returning: func [value /local script] [
-        save/header script: %tmp-inner.reb compose ['quit/return (value)] []
+        save/header script: %../../tmp-inner.reb compose ['quit/return (value)] []
         do script
     ]
     all map-each value reduce [
